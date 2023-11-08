@@ -1,4 +1,4 @@
-# Library Api Service
+# Social Network Service
 
 ## Table of Contents
  1. [Introduction](#introduction)
