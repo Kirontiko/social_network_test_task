@@ -23,3 +23,6 @@ class ManageUserView(generics.RetrieveUpdateAPIView):
 class UserActivityView(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [
+        IsAuthenticated,
+    ]
