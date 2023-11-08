@@ -17,3 +17,12 @@ class PostListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ("id", "content", "author_name", "created_at", "total_likes")
+
+
+class LikesAnalyticsSerializer(serializers.ModelSerializer):
+    date = serializers.DateField(source="created_at__date", read_only=True)
+    total_likes = serializers.IntegerField(read_only=True)
+
+    class Meta:
+        model = Post
+        fields = ("date", "total_likes")
